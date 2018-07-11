@@ -50,8 +50,7 @@ The chart can be added to a designer e.g. \(Form, Window, Grid, Panel, etc.\) an
 
    // Generate some data with your algorithm.
    var data = new SeriesPoint[pointsCount]; 
-   for (int i = 0; i < pointsCount; i++) 
-   {  
+   for (int i = 0; i < pointsCount; i++) {  
         data[i].X = (double)i;         // “Your double X-value”; 
         data[i].Y = rand.Next(0, 100); // “Your double Y-value”; 
    }
