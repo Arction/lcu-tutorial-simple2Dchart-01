@@ -1,0 +1,27 @@
+﻿<Window x:Class="SimpleLine_WPF_SB.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:lcu="http://schemas.arction.com/semibindablecharting/ultimate/"
+        Title="LightningChart tutorial 01 - First 2D Chart" Height="350" Width="525">
+    <Grid>
+        <lcu:LightningChartUltimate Name="chart">
+            <lcu:LightningChartUltimate.ViewXY>
+                <lcu:ViewXY>
+                    <lcu:ViewXY.PointLineSeries>
+                        <lcu:PointLineSeries x:Name="series">
+                            <lcu:PointLineSeries.LineStyle>
+                                <lcu:LineStyle Color="#FFFFA500" AntiAliasing="Normal" Width="2"/>
+                            </lcu:PointLineSeries.LineStyle>
+                        </lcu:PointLineSeries>
+                    </lcu:ViewXY.PointLineSeries>
+                    <lcu:ViewXY.YAxes>
+                        <lcu:AxisY/>
+                    </lcu:ViewXY.YAxes>
+                    <lcu:ViewXY.XAxes>
+                        <lcu:AxisX ScrollMode="None" ValueType="Number"/>
+                    </lcu:ViewXY.XAxes>
+                </lcu:ViewXY>
+            </lcu:LightningChartUltimate.ViewXY>
+        </lcu:LightningChartUltimate>
+    </Grid>
+</Window>
