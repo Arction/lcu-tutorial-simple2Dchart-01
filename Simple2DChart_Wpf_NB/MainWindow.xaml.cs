@@ -18,7 +18,7 @@ using System.Windows.Media;
 using Arction.Wpf.Charting;             // LightningChartUltimate and general types
 using Arction.Wpf.Charting.SeriesXY;    // Series for 2D chart
 
-namespace SimpleLine_WpfNB
+namespace SimpleLine_WPF_NB
 {
     public partial class MainWindow : Window
     {
