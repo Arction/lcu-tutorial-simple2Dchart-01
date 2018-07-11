@@ -2,7 +2,7 @@
 
 With LightningCharts DLLs included in your project, you are ready to create your first chart. We will begin with creating a simple line chart for WinForms and WPF platforms without MVVM implementation.
 
-![](/assets/Tutorial_First_Chart_Reuslt.png)
+![](./assets/Tutorial_First_Chart_Reuslt.png)
 
 The chart can be added to a designer e.g. \(Form, Window, Grid, Panel, etc.\) and configured by using Properties window. However, this tutorials series shows how to create everything in code, thereby providing the best way for maintainability in further project development.
 
