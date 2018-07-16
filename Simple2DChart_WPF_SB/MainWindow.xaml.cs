@@ -31,8 +31,7 @@ namespace SimpleLine_WPF_SB
             int pointCounter = 70;
 
             var data = new SeriesPoint[pointCounter];
-            for (int i = 0; i < pointCounter; i++)
-            {
+            for (int i = 0; i < pointCounter; i++) {
                 data[i].X = (double)i;
                 data[i].Y = rand.Next(0, 100);
             }
@@ -55,8 +54,7 @@ namespace SimpleLine_WPF_SB
             chart.Title.Color = Color.FromArgb(255, 249, 202, 3);
             chart.Title.MouseHighlight = MouseOverHighlight.None;
 
-            foreach (var yAxis in chart.ViewXY.YAxes)
-            {
+            foreach (var yAxis in chart.ViewXY.YAxes) {
                 yAxis.Title.Color = Color.FromArgb(255, 249, 202, 3);
                 yAxis.Title.MouseHighlight = MouseOverHighlight.None;
                 yAxis.MajorGrid.Color = Color.FromArgb(35, 255, 255, 255);
@@ -64,8 +62,7 @@ namespace SimpleLine_WPF_SB
                 yAxis.MinorDivTickStyle.Visible = false;
             }
 
-            foreach (var xAxis in chart.ViewXY.XAxes)
-            {
+            foreach (var xAxis in chart.ViewXY.XAxes) {
                 xAxis.Title.Color = Color.FromArgb(255, 249, 202, 3);
                 xAxis.Title.MouseHighlight = MouseOverHighlight.None;
                 xAxis.MajorGrid.Color = Color.FromArgb(35, 255, 255, 255);

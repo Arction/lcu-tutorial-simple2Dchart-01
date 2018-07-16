@@ -27,7 +27,7 @@ namespace SimpleLine_WPF_NB
             InitializeComponent();
 
             // 1. Create chart instance and store it member variable
-            var chart = new LightningChartUltimate(/*Set your License key here..*/);
+            var chart = new LightningChartUltimate();
 
             // 2. Set chart control into the parent container.
             (Content as Grid).Children.Add(chart);
@@ -37,8 +37,7 @@ namespace SimpleLine_WPF_NB
             int pointCounter = 70;
 
             var data = new SeriesPoint[pointCounter];
-            for (int i = 0; i < pointCounter; i++)
-            {
+            for (int i = 0; i < pointCounter; i++) {
                 data[i].X = (double)i;
                 data[i].Y = rand.Next(0, 100);
             }
@@ -72,8 +71,7 @@ namespace SimpleLine_WPF_NB
             chart.Title.Color = Color.FromArgb(255, 249, 202, 3);
             chart.Title.MouseHighlight = MouseOverHighlight.None;
 
-            foreach (var yAxis in chart.ViewXY.YAxes)
-            {
+            foreach (var yAxis in chart.ViewXY.YAxes) {
                 yAxis.Title.Color = Color.FromArgb(255, 249, 202, 3);
                 yAxis.Title.MouseHighlight = MouseOverHighlight.None;
                 yAxis.MajorGrid.Color = Color.FromArgb(35, 255, 255, 255);
@@ -81,8 +79,7 @@ namespace SimpleLine_WPF_NB
                 yAxis.MinorDivTickStyle.Visible = false;
             }
 
-            foreach (var xAxis in chart.ViewXY.XAxes)
-            {
+            foreach (var xAxis in chart.ViewXY.XAxes) {
                 xAxis.Title.Color = Color.FromArgb(255, 249, 202, 3);
                 xAxis.Title.MouseHighlight = MouseOverHighlight.None;
                 xAxis.MajorGrid.Color = Color.FromArgb(35, 255, 255, 255);
