@@ -6,14 +6,14 @@ With LightningCharts DLLs included in your project, you are ready to create your
 
 The chart can be added to a designer e.g. \(Form, Window, Grid, Panel, etc.\) and configured by using Properties window. However, this tutorials series shows how to create everything in code, thereby providing the best way for maintainability in further project development.
 
-1. Declare a LightningChart instance.
+##### 1. Declare a LightningChart instance.
 
    ```csharp
    // Create chart instance.
    var chart = new LightningChartUltimate();
    ```
 
-2. Set the parent container of the chart where it will be rendered.
+##### 2. Set the parent container of the chart where it will be rendered.
 
    Windows Forms:
 
@@ -30,7 +30,7 @@ The chart can be added to a designer e.g. \(Form, Window, Grid, Panel, etc.\) an
    (Content as Grid).Children.Add(chart);
    ```
 
-3. Create linear series, e.g. PointLineSeries.
+##### 3. Create linear series, e.g. PointLineSeries.
 
    ```csharp
    // New line-series instance is assigned to default X and Y axes.
@@ -41,7 +41,7 @@ The chart can be added to a designer e.g. \(Form, Window, Grid, Panel, etc.\) an
    );
    ```
 
-4. Generate some random data or convert from source to appropriate format.
+##### 4. Generate some random data or convert from source to appropriate format.
 
    ```csharp
    // Scatter data randomly.
@@ -56,24 +56,24 @@ The chart can be added to a designer e.g. \(Form, Window, Grid, Panel, etc.\) an
    }
    ```
 
-5. Set generated data-points into series.
+##### 5. Set generated data-points into series.
 
    ```csharp
    series.Points = data; // Assign data.
    ```
 
-6. Add created linear series to chart collection of specific series type.
+##### 6. Add created linear series to chart collection of specific series type.
 
    ```csharp
    // Add the series into list of point-line-series.
    chart.ViewXY.PointLineSeries.Add(series);
    ```
 
-7. Autoscale chart axes to show all series data-points.
+##### 7. Autoscale chart axes to show all series data-points.
 
    ```csharp
    // Autoscale view according to given data. 
    chart.ViewXY.ZoomToFit();
    ```
 
-8. Build and Run the application.
+##### 8. Build and Run the application.
