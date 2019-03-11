@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -34,32 +34,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Arction.DirectX">
-      <HintPath>..\..\packages\LightningChartUltimateWPF7.7.2.4.1\lib\net40-client\Arction.DirectX.dll</HintPath>
-    </Reference>
-    <Reference Include="Arction.DirectXFiles">
-      <HintPath>..\..\packages\LightningChartUltimateWPF7.7.2.4.1\lib\net40-client\Arction.DirectXFiles.dll</HintPath>
-    </Reference>
-    <Reference Include="Arction.DirectXInit">
-      <HintPath>..\..\packages\LightningChartUltimateWPF7.7.2.4.1\lib\net40-client\Arction.DirectXInit.dll</HintPath>
-    </Reference>
-    <Reference Include="Arction.Licensing">
-      <HintPath>..\..\packages\LightningChartUltimateWPF7.7.2.4.1\lib\net40-client\Arction.Licensing.dll</HintPath>
-    </Reference>
-    <Reference Include="Arction.RenderingDefinitions">
-      <HintPath>..\..\packages\LightningChartUltimateWPF7.7.2.4.1\lib\net40-client\Arction.RenderingDefinitions.dll</HintPath>
-    </Reference>
-    <Reference Include="Arction.RenderingEngine">
-      <HintPath>..\..\packages\LightningChartUltimateWPF7.7.2.4.1\lib\net40-client\Arction.RenderingEngine.dll</HintPath>
-    </Reference>
-    <Reference Include="Arction.RenderingEngine11">
-      <HintPath>..\..\packages\LightningChartUltimateWPF7.7.2.4.1\lib\net40-client\Arction.RenderingEngine11.dll</HintPath>
-    </Reference>
-    <Reference Include="Arction.RenderingEngine9">
-      <HintPath>..\..\packages\LightningChartUltimateWPF7.7.2.4.1\lib\net40-client\Arction.RenderingEngine9.dll</HintPath>
-    </Reference>
     <Reference Include="Arction.Wpf.Charting.LightningChartUltimate">
-      <HintPath>..\..\packages\LightningChartUltimateWPF7.7.2.4.1\lib\net40-client\Arction.Wpf.Charting.LightningChartUltimate.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\LightningChart\v84\LibNET4\Arction.Wpf.Charting.LightningChartUltimate.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />

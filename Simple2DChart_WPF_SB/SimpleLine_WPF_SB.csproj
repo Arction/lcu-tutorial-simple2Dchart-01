@@ -34,41 +34,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Arction.DirectX, Version=7.2.4.4001, Culture=neutral, PublicKeyToken=6484d7bb14b95dd3, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\LightningChartUltimateWPF7.7.2.4.1\lib\net40-client\Arction.DirectX.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Arction.DirectX">
+      <HintPath>..\..\..\..\..\..\LightningChart\Main\v84_main\LibNET4\Arction.DirectX.dll</HintPath>
     </Reference>
-    <Reference Include="Arction.DirectXFiles, Version=7.2.4.4001, Culture=neutral, PublicKeyToken=6484d7bb14b95dd3, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\LightningChartUltimateWPF7.7.2.4.1\lib\net40-client\Arction.DirectXFiles.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Arction.RenderingDefinitions">
+      <HintPath>..\..\..\..\..\..\LightningChart\Main\v84_main\LibNET4\Arction.RenderingDefinitions.dll</HintPath>
     </Reference>
-    <Reference Include="Arction.DirectXInit, Version=7.2.4.4001, Culture=neutral, PublicKeyToken=6484d7bb14b95dd3, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\LightningChartUltimateWPF7.7.2.4.1\lib\net40-client\Arction.DirectXInit.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Arction.Licensing, Version=7.2.4.4001, Culture=neutral, PublicKeyToken=6484d7bb14b95dd3, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\LightningChartUltimateWPF7.7.2.4.1\lib\net40-client\Arction.Licensing.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Arction.RenderingDefinitions, Version=7.2.4.4001, Culture=neutral, PublicKeyToken=6484d7bb14b95dd3, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\LightningChartUltimateWPF7.7.2.4.1\lib\net40-client\Arction.RenderingDefinitions.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Arction.RenderingEngine, Version=7.2.4.4001, Culture=neutral, PublicKeyToken=6484d7bb14b95dd3, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\LightningChartUltimateWPF7.7.2.4.1\lib\net40-client\Arction.RenderingEngine.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Arction.RenderingEngine11, Version=7.2.4.4001, Culture=neutral, PublicKeyToken=6484d7bb14b95dd3, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\LightningChartUltimateWPF7.7.2.4.1\lib\net40-client\Arction.RenderingEngine11.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Arction.RenderingEngine9, Version=7.2.4.4001, Culture=neutral, PublicKeyToken=6484d7bb14b95dd3, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\LightningChartUltimateWPF7.7.2.4.1\lib\net40-client\Arction.RenderingEngine9.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Arction.Wpf.SemibindableCharting.LightningChartUltimate, Version=7.2.4.4001, Culture=neutral, PublicKeyToken=6484d7bb14b95dd3, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\LightningChartUltimateWPF7.7.2.4.1\lib\net40-client\Arction.Wpf.SemibindableCharting.LightningChartUltimate.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Arction.Wpf.SemibindableCharting.LightningChartUltimate">
+      <HintPath>..\..\..\..\..\..\LightningChart\Main\v84_main\LibNET4\Arction.Wpf.SemibindableCharting.LightningChartUltimate.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />

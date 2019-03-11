@@ -36,7 +36,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(509, 311);
             this.Name = "Form1";
-            this.Text = "LightningChart tutorial 01 - First 2D Chart";
+            this.Text = "LightningChart Tutorial - Simple 2D Chart with PointLineSeries";
             this.ResumeLayout(false);
 
         }

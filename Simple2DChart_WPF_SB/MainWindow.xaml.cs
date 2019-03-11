@@ -1,5 +1,5 @@
 ﻿// ------------------------------------------------------------------------------------------------------
-// LightningChart® example code: First Simple 2D Chart Demo
+// LightningChart® example code: First Simple 2D Chart Demo.
 //
 // If you need any assistance, or notice error in this example code, please contact support@arction.com. 
 //
@@ -7,14 +7,14 @@
 //
 // http://arction.com/ | support@arction.com | sales@arction.com
 //
-// © Arction Ltd 2009-2017. All rights reserved.  
+// © Arction Ltd 2009-2019. All rights reserved.  
 // ------------------------------------------------------------------------------------------------------
 using System;
 using System.Windows;
 using System.Windows.Media;
 
-// Arction namespaces
-using Arction.Wpf.SemibindableCharting;
+// Arction namespaces.
+using Arction.Wpf.SemibindableCharting; // LightningChartUltimate and general types.
 
 namespace SimpleLine_WPF_SB
 {
@@ -22,30 +22,45 @@ namespace SimpleLine_WPF_SB
     {
         public MainWindow()
         {
-            // 1. Created chart and configure in XAML.
-            // 2. Created PointLineSeries and prepared for variable-interval data, progressing by X.
             InitializeComponent();
 
-            // 3. Prepare data for line-series.
+            // 1. Create chart.
+            // This is done using XAML.
+
+            // Disable rendering before updating chart properties to improve performance
+            // and to prevent unnecessary chart redrawing while changing multiple properties.
+            chart.BeginUpdate();
+
+            // 2. Generate data for series.
             var rand = new Random();
             int pointCounter = 70;
 
             var data = new SeriesPoint[pointCounter];
-            for (int i = 0; i < pointCounter; i++) {
+            for (int i = 0; i < pointCounter; i++)
+            {
                 data[i].X = (double)i;
                 data[i].Y = rand.Next(0, 100);
             }
 
+            // 3. Create a new PointLineSeries.
+            // This is done using XAML.
+
             // 4. Set data-points into series.
             series.Points = data;
 
-            // 5. Auto-scale X and Y axes.
+            // 5. Auto-scale X- and Y-axes.
             chart.ViewXY.ZoomToFit();
 
-            CusomizeChart((Content as System.Windows.Controls.Grid).Children[0] as LightningChartUltimate);
+            #region Hidden polishing
+            CustomizeChart((Content as System.Windows.Controls.Grid).Children[0] as LightningChartUltimate);
+            #endregion
+
+            // Call EndUpdate to enable rendering again.
+            chart.EndUpdate();
         }
 
-        private void CusomizeChart(LightningChartUltimate chart)
+        #region Hidden polishing
+        private void CustomizeChart(LightningChartUltimate chart)
         {
             chart.ChartBackground.Color = System.Windows.Media.Color.FromArgb(255, 30, 30, 30);
             chart.ChartBackground.GradientFill = GradientFill.Solid;
@@ -71,5 +86,6 @@ namespace SimpleLine_WPF_SB
                 xAxis.ValueType = AxisValueType.Number;
             }
         }
+        #endregion
     }
 }

@@ -1,5 +1,5 @@
 ﻿// ------------------------------------------------------------------------------------------------------
-// LightningChart® example code: First Simple 2D Chart Demo
+// LightningChart® example code: First Simple 2D Chart Demo.
 //
 // If you need any assistance, or notice error in this example code, please contact support@arction.com. 
 //
@@ -7,15 +7,15 @@
 //
 // http://arction.com/ | support@arction.com | sales@arction.com
 //
-// © Arction Ltd 2009-2017. All rights reserved.  
+// © Arction Ltd 2009-2019. All rights reserved.  
 // ------------------------------------------------------------------------------------------------------
 using System;
 using System.Drawing;
 using System.Windows.Forms;
 
-// Arction namespaces
-using Arction.WinForms.Charting;                // LightningChartUltimate and general types 
-using Arction.WinForms.Charting.SeriesXY;       // Series for 2D chart     
+// Arction namespaces.
+using Arction.WinForms.Charting;                // LightningChartUltimate and general types.
+using Arction.WinForms.Charting.SeriesXY;       // Series for 2D chart.
 
 namespace SimpleLine_WF
 {
@@ -25,44 +25,57 @@ namespace SimpleLine_WF
         {
             InitializeComponent();
 
-            // 1. Create chart instance and store it member variable.
+            // 1. Create chart.
             var chart = new LightningChartUltimate();
 
-            // 2. Set chart control into the parent container.
-            chart.Parent = this;         //Set form as parent 
-            chart.Dock = DockStyle.Fill; //Maximize to parent client area
+            // Disable rendering before updating chart properties to improve performance
+            // and to prevent unnecessary chart redrawing while changing multiple properties.
+            chart.BeginUpdate();
 
-            // 3. Prepare data for line-series.
+            // 2. Set chart control into the parent container.
+            chart.Parent = this;         // Set form as parent.
+            chart.Dock = DockStyle.Fill; // Maximize to parent client area.
+
+            // 3. Generate data for series.
             var rand = new Random();
             int pointCounter = 70;
 
             var data = new SeriesPoint[pointCounter];
-            for (int i = 0; i < pointCounter; i++) {
+            for (int i = 0; i < pointCounter; i++)
+            {
                 data[i].X = (double)i;
                 data[i].Y = rand.Next(0, 100);
             }
 
-            // 4. Add PointLineSeries for variable-interval data, progressing by X.
-            var series = new PointLineSeries(chart.ViewXY, chart.ViewXY.XAxes[0], chart.ViewXY.YAxes[0]);
+            // 4. Define variables for X- and Y-axis.
+            var axisX = chart.ViewXY.XAxes[0];
+            var axisY = chart.ViewXY.YAxes[0];
+
+            // 5. Create a new PointLineSeries.
+            var series = new PointLineSeries(chart.ViewXY, axisX, axisY);
             series.LineStyle.Color = Color.Orange;
 
-            // 5. Set data-points into series.
+            // 6. Set data-points into series.
             series.Points = data;
 
-            // 6. Add the series into list of point-line-series.
+            // 7. Add series to chart.
             chart.ViewXY.PointLineSeries.Add(series);
 
-            // 7. Auto-scale X and Y axes.
+            // 8. Auto-scale X- and Y-axes.
             chart.ViewXY.ZoomToFit();
 
-            #region Hiden polishing
+            #region Hidden polishing
 
-            CusomizeChart(chart);
+            CustomizeChart(chart);
 
             #endregion
+
+            // Call EndUpdate to enable rendering again.
+            chart.EndUpdate();
         }
 
-        void CusomizeChart(LightningChartUltimate chart)
+        #region Hidden polishing
+        void CustomizeChart(LightningChartUltimate chart)
         {
             chart.Background.Color = Color.FromArgb(255, 30, 30, 30);
             chart.Background.GradientFill = GradientFill.Solid;
@@ -88,5 +101,6 @@ namespace SimpleLine_WF
                 xAxis.ValueType = AxisValueType.Number;
             }
         }
+        #endregion
     }
 }

@@ -1,7 +1,7 @@
 ﻿<Window x:Class="SimpleLine_WPF_NB.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="LightningChart tutorial 01 - First 2D Chart" Height="350" Width="525">
+        Title="LightningChart Tutorial - Simple 2D Chart with PointLineSeries" Height="350" Width="525">
     <Grid>
         
     </Grid>

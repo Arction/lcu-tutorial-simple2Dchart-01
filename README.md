@@ -1,79 +1,83 @@
-# Simple 2D Chart
+# Simple 2D Chart with PointLineSeries.
 
 With LightningCharts DLLs included in your project, you are ready to create your first chart. We will begin with creating a simple line chart for WinForms and WPF platforms without MVVM implementation.
 
-![](./assets/Tutorial_First_Chart_Reuslt.png)
+![](./assets/chart-pointline-series-2d-winforms-wpf.png)
 
-The chart can be added to a designer e.g. \(Form, Window, Grid, Panel, etc.\) and configured by using Properties window. However, this tutorials series shows how to create everything in code, thereby providing the best way for maintainability in further project development.
+The chart can be added to a designer e.g. \(Form, Window, Grid, Panel, etc.\) and configured by using Properties window. However, this tutorial series shows how to create everything in code, thereby providing the best way for maintainability in further project development.
 
-##### 1. Declare a LightningChart instance.
+##### 1. Create chart.
 
 ```csharp
-// Create chart instance.
+// Create chart.
 var chart = new LightningChartUltimate();
 ```
 
 ##### 2. Set the parent container of the chart where it will be rendered.
 
-   Windows Forms:
+WinForms:
 
 ```csharp
-// Set parent container of chart.
+// Set chart control into the parent container.
 chart.Parent = this; 
 chart.Dock = DockStyle.Fill;
 ```
 
-   WPF:
+WPF:
 
 ```csharp
-// Set the parent container of chart.
+// Set chart control into the parent container.
 (Content as Grid).Children.Add(chart);
 ```
 
-##### 3. Create linear series, e.g. PointLineSeries.
+##### 3. Generate data for series.
 
 ```csharp
-// New line-series instance is assigned to default X and Y axes.
-var series = new PointLineSeries(
-   chart.ViewXY,
-   chart.ViewXY.XAxes[0],
-   chart.ViewXY.YAxes[0]
-);
-```
+// Generate data for series.
+var rand = new Random();
+int pointCounter = 70;
 
-##### 4. Generate some random data or convert from source to appropriate format.
-
-```csharp
-// Scatter data randomly.
-Random rand = new Random(); 
-int pointsCount = 70; 
-
-// Generate some data with your algorithm.
-var data = new SeriesPoint[pointsCount]; 
-for (int i = 0; i < pointsCount; i++) {  
-   data[i].X = (double)i;         // “Your double X-value”; 
-   data[i].Y = rand.Next(0, 100); // “Your double Y-value”; 
+var data = new SeriesPoint[pointCounter];
+for (int i = 0; i < pointCounter; i++) 
+{
+      data[i].X = (double)i;
+      data[i].Y = rand.Next(0, 100);
 }
 ```
 
-##### 5. Set generated data-points into series.
+##### 4. Define variables for X- and Y-axis.
 
 ```csharp
-series.Points = data; // Assign data.
+// Define variables for X- and Y-axis.
+var axisX = chart.ViewXY.XAxes[0];
+var axisY = chart.ViewXY.YAxes[0];
 ```
 
-##### 6. Add created linear series to chart collection of specific series type.
+##### 5. Create linear series, e.g. PointLineSeries.
 
 ```csharp
-// Add the series into list of point-line-series.
+// Create a new PointLineSeries.
+var series = new PointLineSeries(chart.ViewXY, axisX, axisY);
+series.LineStyle.Color = Color.Orange;
+```
+
+##### 6. Set generated data-points into series.
+
+```csharp
+// Set data-points into series.
+series.Points = data;
+```
+
+##### 7. Add series to chart.
+
+```csharp
+// Add series to chart.
 chart.ViewXY.PointLineSeries.Add(series);
 ```
 
-##### 7. Autoscale chart axes to show all series data-points.
+##### 8. Auto-scale axes to show all series data.
 
 ```csharp
-// Autoscale view according to given data. 
+// Auto-scale X- and Y-axes.
 chart.ViewXY.ZoomToFit();
 ```
-
-##### 8. Build and Run the application.

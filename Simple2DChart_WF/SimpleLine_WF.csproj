@@ -32,32 +32,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Arction.DirectX">
-      <HintPath>..\..\packages\LightningChartUltimateWinForms7.7.2.4.1\lib\net40-client\Arction.DirectX.dll</HintPath>
-    </Reference>
-    <Reference Include="Arction.DirectXFiles">
-      <HintPath>..\..\packages\LightningChartUltimateWinForms7.7.2.4.1\lib\net40-client\Arction.DirectXFiles.dll</HintPath>
-    </Reference>
-    <Reference Include="Arction.DirectXInit">
-      <HintPath>..\..\packages\LightningChartUltimateWinForms7.7.2.4.1\lib\net40-client\Arction.DirectXInit.dll</HintPath>
-    </Reference>
-    <Reference Include="Arction.Licensing">
-      <HintPath>..\..\packages\LightningChartUltimateWinForms7.7.2.4.1\lib\net40-client\Arction.Licensing.dll</HintPath>
-    </Reference>
-    <Reference Include="Arction.RenderingDefinitions">
-      <HintPath>..\..\packages\LightningChartUltimateWinForms7.7.2.4.1\lib\net40-client\Arction.RenderingDefinitions.dll</HintPath>
-    </Reference>
-    <Reference Include="Arction.RenderingEngine">
-      <HintPath>..\..\packages\LightningChartUltimateWinForms7.7.2.4.1\lib\net40-client\Arction.RenderingEngine.dll</HintPath>
-    </Reference>
-    <Reference Include="Arction.RenderingEngine11">
-      <HintPath>..\..\packages\LightningChartUltimateWinForms7.7.2.4.1\lib\net40-client\Arction.RenderingEngine11.dll</HintPath>
-    </Reference>
-    <Reference Include="Arction.RenderingEngine9">
-      <HintPath>..\..\packages\LightningChartUltimateWinForms7.7.2.4.1\lib\net40-client\Arction.RenderingEngine9.dll</HintPath>
-    </Reference>
     <Reference Include="Arction.WinForms.Charting.LightningChartUltimate">
-      <HintPath>..\..\packages\LightningChartUltimateWinForms7.7.2.4.1\lib\net40-client\Arction.WinForms.Charting.LightningChartUltimate.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\LightningChart\v84\LibNET4\Arction.WinForms.Charting.LightningChartUltimate.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
