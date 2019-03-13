@@ -1,4 +1,4 @@
-# Simple 2D Chart with PointLineSeries.
+# Simple 2D Chart with PointLineSeries
 
 With LightningCharts DLLs included in your project, you are ready to create your first chart. We will begin with creating a simple line chart for WinForms and WPF platforms without MVVM implementation.
 
