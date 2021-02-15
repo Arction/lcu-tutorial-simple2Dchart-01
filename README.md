@@ -10,7 +10,7 @@ The chart can be added to a designer e.g. \(Form, Window, Grid, Panel, etc.\) an
 
 ```csharp
 // Create chart.
-var chart = new LightningChartUltimate();
+var chart = new LightningChart();
 ```
 
 ##### 2. Set the parent container of the chart where it will be rendered.

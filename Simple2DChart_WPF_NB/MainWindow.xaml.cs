@@ -15,7 +15,7 @@ using System.Windows.Controls;
 using System.Windows.Media;
 
 // Arction namespaces.
-using Arction.Wpf.Charting;             // LightningChartUltimate and general types.
+using Arction.Wpf.Charting;             // LightningChart and general types.
 using Arction.Wpf.Charting.SeriesXY;    // Series for 2D chart.
 
 namespace SimpleLine_WPF_NB
@@ -27,7 +27,7 @@ namespace SimpleLine_WPF_NB
             InitializeComponent();
 
             // 1. Create chart.
-            var chart = new LightningChartUltimate();
+            var chart = new LightningChart();
 
             // Disable rendering before updating chart properties to improve performance
             // and to prevent unnecessary chart redrawing while changing multiple properties.
@@ -75,18 +75,18 @@ namespace SimpleLine_WPF_NB
         }
 
         #region Hidden polishing
-        private void CustomizeChart(LightningChartUltimate chart)
+        private void CustomizeChart(LightningChart chart)
         {
             chart.ChartBackground.Color = System.Windows.Media.Color.FromArgb(255, 30, 30, 30);
             chart.ChartBackground.GradientFill = GradientFill.Solid;
             chart.ViewXY.GraphBackground.Color = Color.FromArgb(255, 20, 20, 20);
             chart.ViewXY.GraphBackground.GradientFill = GradientFill.Solid;
             chart.Title.Color = Color.FromArgb(255, 249, 202, 3);
-            chart.Title.MouseHighlight = MouseOverHighlight.None;
+            chart.Title.Highlight = Highlight.None;
 
             foreach (var yAxis in chart.ViewXY.YAxes) {
                 yAxis.Title.Color = Color.FromArgb(255, 249, 202, 3);
-                yAxis.Title.MouseHighlight = MouseOverHighlight.None;
+                yAxis.Title.Highlight = Highlight.None;
                 yAxis.MajorGrid.Color = Color.FromArgb(35, 255, 255, 255);
                 yAxis.MajorGrid.Pattern = LinePattern.Solid;
                 yAxis.MinorDivTickStyle.Visible = false;
@@ -94,7 +94,7 @@ namespace SimpleLine_WPF_NB
 
             foreach (var xAxis in chart.ViewXY.XAxes) {
                 xAxis.Title.Color = Color.FromArgb(255, 249, 202, 3);
-                xAxis.Title.MouseHighlight = MouseOverHighlight.None;
+                xAxis.Title.Highlight = Highlight.None;
                 xAxis.MajorGrid.Color = Color.FromArgb(35, 255, 255, 255);
                 xAxis.MajorGrid.Pattern = LinePattern.Solid;
                 xAxis.MinorDivTickStyle.Visible = false;

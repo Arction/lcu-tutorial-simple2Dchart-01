@@ -14,9 +14,9 @@ using System.Windows;
 using System.Windows.Media;
 
 // Arction namespaces.
-using Arction.Wpf.SemibindableCharting; // LightningChartUltimate and general types.
+using Arction.Wpf.ChartingMVVM; // LightningCharte and general types.
 
-namespace SimpleLine_WPF_SB
+namespace SimpleLine_WPF_bindable
 {
     public partial class MainWindow : Window
     {
@@ -52,7 +52,7 @@ namespace SimpleLine_WPF_SB
             chart.ViewXY.ZoomToFit();
 
             #region Hidden polishing
-            CustomizeChart((Content as System.Windows.Controls.Grid).Children[0] as LightningChartUltimate);
+            CustomizeChart((Content as System.Windows.Controls.Grid).Children[0] as LightningChart);
             #endregion
 
             // Call EndUpdate to enable rendering again.
@@ -60,18 +60,18 @@ namespace SimpleLine_WPF_SB
         }
 
         #region Hidden polishing
-        private void CustomizeChart(LightningChartUltimate chart)
+        private void CustomizeChart(LightningChart chart)
         {
             chart.ChartBackground.Color = System.Windows.Media.Color.FromArgb(255, 30, 30, 30);
             chart.ChartBackground.GradientFill = GradientFill.Solid;
             chart.ViewXY.GraphBackground.Color = Color.FromArgb(255, 20, 20, 20);
             chart.ViewXY.GraphBackground.GradientFill = GradientFill.Solid;
             chart.Title.Color = Color.FromArgb(255, 249, 202, 3);
-            chart.Title.MouseHighlight = MouseOverHighlight.None;
+            chart.Title.Highlight = Highlight.None;
 
             foreach (var yAxis in chart.ViewXY.YAxes) {
                 yAxis.Title.Color = Color.FromArgb(255, 249, 202, 3);
-                yAxis.Title.MouseHighlight = MouseOverHighlight.None;
+                yAxis.Title.Highlight = Highlight.None;
                 yAxis.MajorGrid.Color = Color.FromArgb(35, 255, 255, 255);
                 yAxis.MajorGrid.Pattern = LinePattern.Solid;
                 yAxis.MinorDivTickStyle.Visible = false;
@@ -79,7 +79,7 @@ namespace SimpleLine_WPF_SB
 
             foreach (var xAxis in chart.ViewXY.XAxes) {
                 xAxis.Title.Color = Color.FromArgb(255, 249, 202, 3);
-                xAxis.Title.MouseHighlight = MouseOverHighlight.None;
+                xAxis.Title.Highlight = Highlight.None;
                 xAxis.MajorGrid.Color = Color.FromArgb(35, 255, 255, 255);
                 xAxis.MajorGrid.Pattern = LinePattern.Solid;
                 xAxis.MinorDivTickStyle.Visible = false;

@@ -5,7 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Windows;
 
-namespace SimpleLine_WPF_SB
+namespace SimpleLine_WPF_bindable
 {
     /// <summary>
     /// Interaction logic for App.xaml

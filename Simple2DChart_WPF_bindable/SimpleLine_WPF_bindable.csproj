@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FBFBE24B-74CB-4048-B388-30230BF713F8}</ProjectGuid>
+    <ProjectGuid>{A2E7D9BC-D37A-4527-BD4A-F0715BD43A91}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SimpleLine_WPF_NB</RootNamespace>
-    <AssemblyName>SimpleLine_WPF_NB</AssemblyName>
+    <RootNamespace>SimpleLine_WPF_bindable</RootNamespace>
+    <AssemblyName>SimpleLine_WPF_bindable</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -34,7 +34,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Arction.Wpf.Charting.LightningChart, Version=10.0.1.4001, Culture=neutral, PublicKeyToken=6484d7bb14b95dd3, processorArchitecture=MSIL" />
+    <Reference Include="Arction.DirectX">
+      <HintPath>..\..\..\..\..\..\LightningChart\Main\v84_main\LibNET4\Arction.DirectX.dll</HintPath>
+    </Reference>
+    <Reference Include="Arction.RenderingDefinitions">
+      <HintPath>..\..\..\..\..\..\LightningChart\Main\v84_main\LibNET4\Arction.RenderingDefinitions.dll</HintPath>
+    </Reference>
+    <Reference Include="Arction.Wpf.ChartingMVVM.LightningChart, Version=10.0.1.4001, Culture=neutral, PublicKeyToken=6484d7bb14b95dd3, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
