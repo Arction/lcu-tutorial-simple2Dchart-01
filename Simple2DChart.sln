@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2041
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleLine_WF", "Simple2DChart_WF\SimpleLine_WF.csproj", "{4DFA7BDD-CC2E-4D85-9496-938C4D5AFFBC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleLine_WPF_NB", "Simple2DChart_Wpf_NB\SimpleLine_WPF_NB.csproj", "{FBFBE24B-74CB-4048-B388-30230BF713F8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleLine_WPF_SB", "Simple2DChart_WPF_SB\SimpleLine_WPF_SB.csproj", "{A2E7D9BC-D37A-4527-BD4A-F0715BD43A91}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleLine_WPF_bindable", "Simple2DChart_WPF_bindable\SimpleLine_WPF_bindable.csproj", "{A2E7D9BC-D37A-4527-BD4A-F0715BD43A91}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,5 +30,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {909EEE4B-1988-412C-971B-C547A2BB0FFB}
 	EndGlobalSection
 EndGlobal

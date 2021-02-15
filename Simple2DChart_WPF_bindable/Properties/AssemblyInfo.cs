@@ -7,11 +7,11 @@ using System.Windows;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("SimpleLine_WPF_SB")]
+[assembly: AssemblyTitle("SimpleLine_WPF_bindable")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Arction Ltd")]
-[assembly: AssemblyProduct("SimpleLine_WPF_SB")]
+[assembly: AssemblyProduct("SimpleLine_WPF_bindable")]
 [assembly: AssemblyCopyright("©  Arction Ltd 2017")]
 [assembly: AssemblyTrademark("LightningChart®")]
 [assembly: AssemblyCulture("")]

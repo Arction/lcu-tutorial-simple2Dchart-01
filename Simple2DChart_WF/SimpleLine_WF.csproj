@@ -32,9 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Arction.WinForms.Charting.LightningChartUltimate">
-      <HintPath>..\..\..\..\..\..\..\LightningChart\v84\LibNET4\Arction.WinForms.Charting.LightningChartUltimate.dll</HintPath>
-    </Reference>
+    <Reference Include="Arction.WinForms.Charting.LightningChart, Version=10.0.1.4001, Culture=neutral, PublicKeyToken=6484d7bb14b95dd3, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
